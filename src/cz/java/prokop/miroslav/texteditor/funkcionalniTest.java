@@ -11,7 +11,7 @@ public class funkcionalniTest {
 
         Zapis zapis = new Zapis();
 
-        zapis.zapisDoSouboru(data);
+        //zapis.zapisDoSouboru(data);
 
         CteniSouboru cteni = new CteniSouboru();
 

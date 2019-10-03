@@ -5,12 +5,12 @@ import java.io.IOException;
 
 public class CreateFile {
 
-    public String vytvorSoubor(String path){
+    public String vytvorSoubor(String path) {
         File file = new File(path);
         try {
-            if (file.createNewFile()){
+            if (file.createNewFile()) {
                 return path;
-            }else {
+            } else {
                 return null;
             }
         } catch (IOException e) {
@@ -20,12 +20,8 @@ public class CreateFile {
     }
 
 
-    public boolean isFileExist(String path){
+    public boolean isFileExist(String path) {
         File file = new File(path);
-        if (file.exists()){
-            return true;
-        }else{
-            return false;
-        }
+        return file.exists();
     }
 }

@@ -46,12 +46,11 @@ public class Controller implements Initializable {
 
         Zapis zapis = new Zapis();
         CreateFile createFile = new CreateFile();
-        if (createFile.isFileExist(getFileLocation())){
-            zapis.zapisDoSouboru(getTextAreaText().toString());
-        }else {
+
+        if (!createFile.isFileExist(getFileLocation())) {
             createFile.vytvorSoubor(getFileLocation());
-            zapis.zapisDoSouboru(getTextAreaText().toString());
         }
+        Zapis.zapisDoSouboru(getFileLocation(), getTextAreaText());
 
     }
 

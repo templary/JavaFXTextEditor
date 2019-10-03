@@ -1,13 +1,14 @@
 package cz.java.prokop.miroslav.texteditor;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 
 public class CteniSouboru {
 
-    public StringBuilder ctiZeSouboru(String fileLocation) { //TODO jak zadávat parametr filename??
+    public StringBuilder ctiZeSouboru(String fileLocation) {
 
         StringBuilder stringBuilder = new StringBuilder();
 

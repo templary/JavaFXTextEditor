@@ -1,24 +1,26 @@
 package cz.java.prokop.miroslav.texteditor;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Zapis {
 
-    public static void zapisDoSouboru(String fileLocation){
+    public static void zapisDoSouboru(String fileLocation, StringBuilder stringBuilder) {
 
-        File file =new File(fileLocation);
+        File file = new File(fileLocation);
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter(file);
-            fileWriter.write(fileLocation);
+            fileWriter.write(stringBuilder.toString());
 
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 assert fileWriter != null;
                 fileWriter.close();
-            }catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
@@ -26,10 +28,10 @@ public class Zapis {
 
     }
 
-    public static void zapisDoSouboruAVytvoreni(String fileLocation){
+    public static void zapisDoSouboruAVytvoreni(String fileLocation, StringBuilder stringBuilder) {
         CreateFile createFile = new CreateFile();
 
-        zapisDoSouboru(createFile.vytvorSoubor(fileLocation));
+        zapisDoSouboru(createFile.vytvorSoubor(fileLocation), stringBuilder);
 
     }
 
