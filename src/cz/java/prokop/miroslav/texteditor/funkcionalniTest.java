@@ -2,6 +2,7 @@ package cz.java.prokop.miroslav.texteditor;
 
 public class funkcionalniTest {
 
+
     public static void main(String[] args) {
 
         String data = "Ahoj jak se máš?" + "\n" +

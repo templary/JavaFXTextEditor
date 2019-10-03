@@ -1,6 +1,9 @@
 package cz.java.prokop.miroslav.texteditor;
 
-import java.io.*;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Zapis {
 

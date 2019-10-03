@@ -14,6 +14,7 @@ public class Controller implements Initializable {
     @FXML
     TextArea text = new TextArea();
 
+
     private StringBuilder getTextAreaText() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(text.getText()).append("\n");
@@ -34,7 +35,6 @@ public class Controller implements Initializable {
 
         text.setText(cteniSouboru.ctiZeSouboru().toString());
 
-        
     }
 
     @FXML
