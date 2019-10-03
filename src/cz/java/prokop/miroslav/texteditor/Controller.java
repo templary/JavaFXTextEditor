@@ -34,7 +34,7 @@ public class Controller implements Initializable {
 
         text.setText(cteniSouboru.ctiZeSouboru().toString());
 
-
+        
     }
 
     @FXML
