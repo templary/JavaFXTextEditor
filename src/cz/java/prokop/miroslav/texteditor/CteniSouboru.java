@@ -7,13 +7,13 @@ import java.nio.file.Paths;
 
 public class CteniSouboru {
 
-    public StringBuilder ctiZeSouboru() { //TODO jak zadávat parametr filename??
+    public StringBuilder ctiZeSouboru(String fileLocation) { //TODO jak zadávat parametr filename??
 
         StringBuilder stringBuilder = new StringBuilder();
 
         BufferedReader bufferedReader = null;
         try {
-            bufferedReader = Files.newBufferedReader(Paths.get("text.txt"));
+            bufferedReader = Files.newBufferedReader(Paths.get(fileLocation));
         } catch (IOException e) {
             e.printStackTrace();
         }

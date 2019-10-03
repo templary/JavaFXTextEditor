@@ -4,13 +4,13 @@ import java.io.*;
 
 public class Zapis {
 
-    public static void zapisDoSouboru(String text){
+    public static void zapisDoSouboru(String fileLocation){
 
-        File file =new File("text.txt");
+        File file =new File(fileLocation);
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter(file);
-            fileWriter.write(text);
+            fileWriter.write(fileLocation);
 
         } catch (IOException e){
             e.printStackTrace();
@@ -23,6 +23,13 @@ public class Zapis {
             }
         }
 
+
+    }
+
+    public static void zapisDoSouboruAVytvoreni(String fileLocation){
+        CreateFile createFile = new CreateFile();
+
+        zapisDoSouboru(createFile.vytvorSoubor(fileLocation));
 
     }
 

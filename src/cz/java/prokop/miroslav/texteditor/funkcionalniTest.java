@@ -15,7 +15,9 @@ public class funkcionalniTest {
 
         CteniSouboru cteni = new CteniSouboru();
 
-        System.out.println(cteni.ctiZeSouboru());
+        String fileLocation = "text.txt";
+
+        System.out.println(cteni.ctiZeSouboru(fileLocation));
 
     }
 
